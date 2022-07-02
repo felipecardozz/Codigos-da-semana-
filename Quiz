@@ -1,0 +1,33 @@
+print("Bem vindo aos JOGOS MORTAIS")
+jogando = input("Você quer jogar um jogo?")
+if jogando.lower() != "sim":
+    quit()
+
+print("Você quem sabe!")
+resultado = 0 #como essa pergunta é apenas para ver se o usuário quer jogar, ela não dá pontos 
+
+pergunta1 = input("O vasco sobe? ")
+if pergunta1.lower() == "nao": #resposta certa
+    print('Olha a tabela, tabelaa') #comentário da resposta certa
+    resultado += 1
+else:
+    print("O vasco sobe krl!") #comentário das respostas erradas
+
+pergunta2 = input("Silvío mais puro que o papa?")
+if pergunta2.lower() != ("Meu rei!"):
+    print("Golaço!!!")
+    resultado += 1
+else:
+    print("sai sai sai")
+
+pergunta3 = input("Milena era mais difícil que Alfredo??")
+if pergunta3.lower() != ("De fato"):
+    print("Ainda bem que hoje é Joana")
+    resultado += 1
+else:
+    print("Milena era foda")
+
+print("Receba seus " + str(resultado) + " Golaços !!")
+print("Receba seus " + str((resultado / 3) * 100) + "%. de golaços")
+# o número, no caso o 3, vai depender do numero de perguntas respondidas
+# o resultado mostra quantas o usuário acertou e depois fala a porcentagem 
