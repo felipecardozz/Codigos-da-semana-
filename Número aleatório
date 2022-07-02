@@ -1,0 +1,37 @@
+import random
+
+x = input("Digite um número:")
+
+if x.isdigit():
+    x = int(x)
+
+    if x <= 0: #quando não for zero 
+        print("Um número maior que 0") 
+        quit()
+else:
+    print("Que seja um número pfv")
+    quit()
+
+numero = random.randint(0, x)
+tentativas = 0
+
+while True:
+    tentativas += 1
+    usuário = input("Número: ")
+    if usuário.isdigit():
+        usuário = int(usuário)
+    else:
+        print("Um número né, mds!")
+        continue
+
+    if usuário == numero:
+        print("Aulas Paizão!")
+        break
+    elif usuário > numero:
+        print("Um número menor")
+    else:
+        print("Um número maior")
+
+print("Você acertou em", tentativas, "tentativas")
+
+#depois vai ter um melhor com números maiores que 10 
